@@ -29,6 +29,10 @@ resource "aws_instance" "rasa-instance" {
     inline = [
       "sudo apt-get update",
       "curl -sSL -o install.sh https://storage.googleapis.com/rasa-x-releases/0.24.1/install.sh",
+      "mkdir /etc/rasa",
+      "mkdir /etc/rasa/terms",
+      "touch /etc/rasa/terms/agree.txt",
+      "sudo bash ./install.sh"
     ]
   }
 }

@@ -1,0 +1,44 @@
+slots:
+  drink:
+    type: unfeaturized
+
+entities:
+- drink
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - inform
+  - request_drink_recipe:
+      use_entities: []
+
+actions:
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- action_search_drinks
+- utter_slots_values
+
+templates:
+  utter_greet:
+    - text: "Hey! How are you?"
+  utter_goodbye:
+    - text: "Bye"
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  utter_ask_drink:
+    - text: "What drink would you like the recipe for?"
+  utter_wrong_drink:
+    - text: "Sorry I cannot find that drink in my recipe list, please try again"
+  utter_slots_values:
+    - text: "I am going to run a drink search for {drink}"
+
+forms:
+  - drink_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,3 +1,13 @@
 terraform.tfstate
 terraform.tfstate.backup
 deployment/aws/.terraform
+
+# python stuff
+__pycache__/
+.vscode/
+
+# rasa stuff
+venv/
+results/
+models/
+.pytype/
