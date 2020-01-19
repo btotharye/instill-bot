@@ -5,6 +5,7 @@ deployment/aws/.terraform
 # python stuff
 __pycache__/
 .vscode/
+.DS_Store
 
 # rasa stuff
 venv/
@@ -14,3 +15,4 @@ models/
 *.db
 *.db-shm
 *.db-wal
+gactions

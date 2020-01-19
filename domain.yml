@@ -10,6 +10,7 @@ intents:
 - inform
 - request_drink_recipe:
     use_entities: []
+- thanks
 entities:
 - drink
 slots:
@@ -18,7 +19,8 @@ slots:
     auto_fill: false
 templates:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hello!  I am the Instill Bot.  I can help you with our drink recipes.  What
+      drink would you like to make?
   utter_goodbye:
   - text: Bye
   utter_iamabot:
@@ -33,10 +35,13 @@ templates:
   - text: All done!
   utter_default:
   - text: sorry, I didn't understand you, please try inputing something else
+  utter_thanks:
+  - text: You are welcome
 actions:
 - utter_greet
 - utter_goodbye
 - utter_iamabot
 - utter_slots_values
+- utter_thanks
 forms:
 - drink_form

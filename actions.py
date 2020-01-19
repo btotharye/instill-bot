@@ -71,16 +71,17 @@ class DrinkForm(FormAction):
         """Define what the form has to do
             after all required slots are filled"""
         drink = tracker.get_slot("drink")
+        drink_recipe = {}
+
+        print(f"The drink is: {drink}")
+        print(f"The recipes dict is: {drink_recipes_dict}")
 
         for drink_recipe in drink_recipes_dict:
+            print(f"The drink recipe name is: {drink_recipe['name']}")
             if drink_recipe['name'] == drink:
                 drink_ingredients = ' \n'.join([str(elem) for elem in drink_recipe['ingredients']])
                 drink_garnish = drink_recipe['garnish']
 
                 # Utter recipe to user if found in dictionary from json file.
                 dispatcher.utter_message(text=f"To make a {drink}, you will combine the following ingredients: \n {drink_ingredients} \n and garnish with {drink_garnish}")
-                return []
-            else:
-                dispatcher.utter_message(text=f"Sorry I cannot find the recipe for {drink} in my database.")
-                return []
-        
+        return []        
