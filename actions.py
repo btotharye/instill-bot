@@ -5,8 +5,9 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 import json
 
-with open('drinks.json', 'r') as f:
+with open("drinks.json", "r") as f:
     drink_recipes_dict = json.load(f)
+
 
 class DrinkForm(FormAction):
     """Custom form action for drink search"""
@@ -51,8 +52,6 @@ class DrinkForm(FormAction):
     ) -> Dict[Text, Any]:
         """Validate drink value."""
 
-        print(f"The drink value to validate is: {value.lower()}")
-
         if value.lower() in self.drink_db():
             # validation succeeded, set the value of the "drink" slot to value
             return {"drink": value}
@@ -73,15 +72,19 @@ class DrinkForm(FormAction):
         drink = tracker.get_slot("drink")
         drink_recipe = {}
 
-        print(f"The drink is: {drink}")
-        print(f"The recipes dict is: {drink_recipes_dict}")
-
+        # Ensure drink recipe is in our drink dict and
+        # grab its data for the response.
         for drink_recipe in drink_recipes_dict:
-            print(f"The drink recipe name is: {drink_recipe['name']}")
-            if drink_recipe['name'] == drink:
-                drink_ingredients = ' \n'.join([str(elem) for elem in drink_recipe['ingredients']])
-                drink_garnish = drink_recipe['garnish']
+            if drink_recipe["name"] == drink:
+                drink_ingredients = " \n".join(
+                    [str(elem) for elem in drink_recipe["ingredients"]]
+                )
+                drink_garnish = drink_recipe["garnish"]
 
                 # Utter recipe to user if found in dictionary from json file.
-                dispatcher.utter_message(text=f"To make a {drink}, you will combine the following ingredients: \n {drink_ingredients} \n and garnish with {drink_garnish}")
-        return []        
+                dispatcher.utter_message(
+                    f"To make a {drink}, you will combine the following "
+                    f"ingredients: \n {drink_ingredients} \n"
+                    f"and garnish with {drink_garnish}"
+                )
+        return []
