@@ -3,7 +3,10 @@ from typing import Dict, Text, Any, List, Union
 from rasa_sdk import Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
+import json
 
+with open('drinks.json', 'r') as f:
+    drink_recipes_dict = json.load(f)
 
 class DrinkForm(FormAction):
     """Custom form action for drink search"""
@@ -48,7 +51,7 @@ class DrinkForm(FormAction):
     ) -> Dict[Text, Any]:
         """Validate drink value."""
 
-        print(f"The drink value to validate is: {value}")
+        print(f"The drink value to validate is: {value.lower()}")
 
         if value.lower() in self.drink_db():
             # validation succeeded, set the value of the "drink" slot to value
@@ -69,7 +72,9 @@ class DrinkForm(FormAction):
             after all required slots are filled"""
         drink = tracker.get_slot("drink")
 
-        print(f"The drink lookup is for: {drink}")
+        for drink_recipe in drink_recipes_dict:
+            if drink_recipe['name'] == drink:
+                print(f"The drink recipe is: {drink_recipe}")
 
         # utter submit template
         dispatcher.utter_message(template="utter_submit")
