@@ -28,7 +28,6 @@ class DrinkForm(FormAction):
 
         return {"drink": self.from_entity(entity="drink")}
 
-    # USED FOR DOCS: do not rename without updating in docs
     @staticmethod
     def drink_db() -> List[Text]:
         """Database of supported drinks"""
@@ -48,6 +47,8 @@ class DrinkForm(FormAction):
         domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
         """Validate drink value."""
+
+        print(f"The drink value to validate is: {value}")
 
         if value.lower() in self.drink_db():
             # validation succeeded, set the value of the "drink" slot to value

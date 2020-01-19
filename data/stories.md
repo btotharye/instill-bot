@@ -1,9 +1,8 @@
 ## happy path no greet
 * request_drink_recipe
-    - action_search_drinks
+    - drink_form
     - form{"name": "drink_form"}
     - form{"name": null}
-    - utter_slots_values
 
 ## say goodbye
 * goodbye

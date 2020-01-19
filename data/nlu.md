@@ -43,11 +43,11 @@
 - I would like the recipe to make a [Rum Punch](drink)
 - Can you tell me how to make a [Hemingway](drink)
 - I'm looking for instructions to make a drink.
+- I'm looking for instructions to make a [Rum Punch](drink) drink.
 
 
 ## intent:inform
 - [Painkiller](drink)
 - [Rum Punch](drink)
 - [Joco Mule](drink)
-- I'm looking for instructions to make a [Rum Punch](drink) drink.
 - I want a [Rum Punch](drink)

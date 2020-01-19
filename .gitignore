@@ -11,3 +11,6 @@ venv/
 results/
 models/
 .pytype/
+*.db
+*.db-shm
+*.db-wal
