@@ -64,16 +64,13 @@
 ## synonym:rum punch
 - Rum Punch
 - rumpunch
-- rum punch
 
 ## synonym:painkiller
 - Pain Killer
-- painkiller
 - pain killer
 
 ## synonym:joco mule
 - Joco Mule
-- joco mule
 - jocomule
 - mule
 - the joco
@@ -81,5 +78,4 @@
 
 ## synonym:hemingway
 - Hemingway
-- hemingway
 - hemingweigh

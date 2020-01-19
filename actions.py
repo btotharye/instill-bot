@@ -74,12 +74,13 @@ class DrinkForm(FormAction):
 
         for drink_recipe in drink_recipes_dict:
             if drink_recipe['name'] == drink:
-                print(f"The drink recipe is: {drink_recipe}")
-                drink_ingredients = ' ,'.join([str(elem) for elem in drink_recipe['ingredients']])
+                drink_ingredients = ' \n'.join([str(elem) for elem in drink_recipe['ingredients']])
                 drink_garnish = drink_recipe['garnish']
-                print(f"The drink ingredients are: {drink_ingredients}")
-                print(f"The garnish is: {drink_garnish}")
 
-        # utter submit template
-        dispatcher.utter_message(template="utter_submit")
-        return []
+                # Utter recipe to user if found in dictionary from json file.
+                dispatcher.utter_message(text=f"To make a {drink}, you will combine the following ingredients: \n {drink_ingredients} \n and garnish with {drink_garnish}")
+                return []
+            else:
+                dispatcher.utter_message(text=f"Sorry I cannot find the recipe for {drink} in my database.")
+                return []
+        
