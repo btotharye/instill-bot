@@ -45,6 +45,7 @@
 - I'm looking for instructions to make a drink.
 - I'm looking for instructions to make a [Rum Punch](drink) drink.
 - How do I make a [joco mule](drink)
+- How can I make a [hemingway](drink)
 
 
 ## intent:inform
@@ -57,6 +58,8 @@
 - [joco mule](drink)
 - [jocomule](drink)
 - [Rum Punch](drink)
+- [Hemingway](drink)
+- [hemingway](drink)
 
 ## synonym:rum punch
 - Rum Punch
@@ -68,10 +71,15 @@
 - painkiller
 - pain killer
 
-## synonym: joco mule
+## synonym:joco mule
 - Joco Mule
 - joco mule
 - jocomule
 - mule
 - the joco
 - joco
+
+## synonym:hemingway
+- Hemingway
+- hemingway
+- hemingweigh
