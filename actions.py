@@ -75,6 +75,10 @@ class DrinkForm(FormAction):
         for drink_recipe in drink_recipes_dict:
             if drink_recipe['name'] == drink:
                 print(f"The drink recipe is: {drink_recipe}")
+                drink_ingredients = ' ,'.join([str(elem) for elem in drink_recipe['ingredients']])
+                drink_garnish = drink_recipe['garnish']
+                print(f"The drink ingredients are: {drink_ingredients}")
+                print(f"The garnish is: {drink_garnish}")
 
         # utter submit template
         dispatcher.utter_message(template="utter_submit")
