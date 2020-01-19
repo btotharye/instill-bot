@@ -48,6 +48,11 @@
 
 ## intent:inform
 - [Painkiller](drink)
+- [painkiller](drink)
+- [pain killer](drink)
 - [Rum Punch](drink)
+- [rum punch](drink)
+- [rumpunch](drink)
 - [Joco Mule](drink)
+- [joco mule](drink)
 - I want a [Rum Punch](drink)
