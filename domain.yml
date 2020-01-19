@@ -11,7 +11,7 @@ intents:
 - request_drink_recipe:
     use_entities: []
 entities:
-  - drink
+- drink
 slots:
   drink:
     type: unfeaturized
@@ -32,11 +32,11 @@ templates:
   utter_submit:
   - text: All done!
   utter_default:
-    - text: "sorry, I didn't understand you, please try inputing something else"
+  - text: sorry, I didn't understand you, please try inputing something else
 actions:
 - utter_greet
 - utter_goodbye
 - utter_iamabot
 - utter_slots_values
 forms:
-  - drink_form
+- drink_form
