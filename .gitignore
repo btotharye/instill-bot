@@ -16,4 +16,4 @@ models/
 *.db-shm
 *.db-wal
 gactions
-credentials.yaml
+credentials.yml
