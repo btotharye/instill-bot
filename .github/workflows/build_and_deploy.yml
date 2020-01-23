@@ -13,7 +13,7 @@ jobs:
         python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Code Formatting Tests
       working-directory: ${{ github.workspace }}
