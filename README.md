@@ -8,8 +8,11 @@ For local deployment I recommend just using [Rasa Open Source](https://rasa.com/
 
 You can install this via `pip3 install rasa` (Recommended in a venv)
 
+You will also need to install the pre-reqs with `pip3 install requirements-dev.txt` and `pip3 install requirements.txt`
+
 1. Train the model - `rasa train`
-2. Then talk to it/test it via the CLI with - `rasa shell`
+2. Bring up action server - `rasa run actions --actions actions`
+3. Then talk to it/test it via the CLI with - `rasa shell`
 
 # Server Deployment
 Uses [Terraform](https://www.terraform.io) to deploy resources, right now only example is AWS EC2 instance.  Will have it fully automated soon but for now it sets up a EC2 instance and pulls the Rasa X automated install script down and then you can run it at your leisure to setup your assistant.
