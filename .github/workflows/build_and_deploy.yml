@@ -30,7 +30,7 @@ jobs:
         python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Type Checking
       working-directory: ${{ github.workspace }}
@@ -47,7 +47,7 @@ jobs:
         python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Rasa Data Validation
       working-directory: ${{ github.workspace }}
@@ -65,7 +65,7 @@ jobs:
         python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Train Model
       working-directory: ${{ github.workspace }}
