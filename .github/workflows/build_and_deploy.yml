@@ -74,7 +74,7 @@ jobs:
     - name: Test Training Stories
       working-directory: ${{ github.workspace }}
       run: |
-        rasa test --stories test/e2e-stories.md --fail-on-prediction-errors --e2e
+        rasa test --stories tests/e2e-stories.md --fail-on-prediction-errors --e2e
     - name: Cross-validate NLU model
       run: |
         rasa test nlu -f 5 --cross-validation
