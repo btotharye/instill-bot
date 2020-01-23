@@ -24,8 +24,7 @@
 * bot_challenge
   - utter_iamabot
 
-## New Story
-
+## rum punch story
 * greet
     - utter_greet
 * request_drink_recipe{"drink":"rum punch"}
@@ -37,8 +36,7 @@
 * thanks
     - utter_thanks
 
-## New Story
-
+## hemingway story
 * request_drink_recipe{"drink":"hemingway"}
     - drink_form
     - form{"name":"drink_form"}
@@ -47,3 +45,14 @@
     - slot{"requested_slot":null}
 * thanks
     - utter_thanks
+
+## faq
+* faq
+    - respond_faq
+
+## interruption path
+* request_drink_recipe
+    - drink_form
+* faq
+    - respond_faq
+    - drink_form

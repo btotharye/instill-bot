@@ -8,6 +8,7 @@ intents:
 - deny
 - bot_challenge
 - inform
+- faq
 - request_drink_recipe:
     use_entities: []
 - thanks
@@ -43,5 +44,6 @@ actions:
 - utter_iamabot
 - utter_slots_values
 - utter_thanks
+- respond_faq
 forms:
 - drink_form

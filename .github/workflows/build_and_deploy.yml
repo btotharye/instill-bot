@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Python 3.7
+    - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Code Formatting Tests
       working-directory: ${{ github.workspace }}
@@ -24,13 +24,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Python 3.7
+    - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Type Checking
       working-directory: ${{ github.workspace }}
@@ -41,13 +41,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Python 3.7
+    - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Rasa Data Validation
       working-directory: ${{ github.workspace }}
@@ -59,13 +59,13 @@ jobs:
     needs: [data-validation]
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Python 3.7
+    - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: 3.6
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install -U 'pip<20'
         pip install -r requirements-dev.txt
     - name: Train Model
       working-directory: ${{ github.workspace }}
@@ -74,7 +74,7 @@ jobs:
     - name: Test Training Stories
       working-directory: ${{ github.workspace }}
       run: |
-        rasa test --stories test/e2e-stories.md --fail-on-prediction-errors
+        rasa test --stories tests/e2e-stories.md --fail-on-prediction-errors --e2e
     - name: Cross-validate NLU model
       run: |
         rasa test nlu -f 5 --cross-validation

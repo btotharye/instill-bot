@@ -6,8 +6,10 @@ pipeline:
 - name: CountVectorsFeaturizer
   token_pattern: (?u)\b\w+\b
 - name: EmbeddingIntentClassifier
+- name: "ResponseSelector"
 policies:
 - name: FallbackPolicy
 - name: AugmentedMemoizationPolicy
 - name: FormPolicy
 - name: MappingPolicy
+
