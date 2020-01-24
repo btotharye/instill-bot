@@ -1,5 +1,5 @@
 session_config:
-  session_expiration_time: 60.0
+  session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
 - greet
@@ -8,7 +8,6 @@ intents:
 - deny
 - bot_challenge
 - inform
-- faq
 - request_drink_recipe:
     use_entities: []
 - thanks
@@ -18,6 +17,8 @@ slots:
   drink:
     type: unfeaturized
     auto_fill: false
+  requested_slot:
+    type: unfeaturized
 templates:
   utter_greet:
   - text: Hello!  I am the Instill Bot.  I can help you with our drink recipes.  What
@@ -44,6 +45,5 @@ actions:
 - utter_iamabot
 - utter_slots_values
 - utter_thanks
-- respond_faq
 forms:
 - drink_form
