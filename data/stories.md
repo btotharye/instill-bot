@@ -45,14 +45,3 @@
     - slot{"requested_slot":null}
 * thanks
     - utter_thanks
-
-## faq
-* faq
-    - respond_faq
-
-## interruption path
-* request_drink_recipe
-    - drink_form
-* faq
-    - respond_faq
-    - drink_form
