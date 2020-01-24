@@ -7,7 +7,6 @@ pipeline:
   token_pattern: (?u)\b\w+\b
 - name: EmbeddingIntentClassifier
 policies:
-- name: FallbackPolicy
 - name: AugmentedMemoizationPolicy
 - name: FormPolicy
 - name: MappingPolicy
