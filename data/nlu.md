@@ -100,6 +100,7 @@
 - Can you bring dogs in
 - are you pet friendly
 - can I bring my dog
+- can I bring my dog with me?
 - are dogs allowed?
 
 ## intent:tours
@@ -109,6 +110,7 @@
 ## intent:hours
 - What are your hours today
 - what are your hours
+- what are your hours of operation
 - when are you open?
 - I want to know your hours
 - please let me know when you are open
