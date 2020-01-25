@@ -60,7 +60,6 @@
 - How can I make a [hemingway](drink)
 - how do I make a [rum punch](drink)[punch](drink)
 - I want to find a drink recipe
-- what drinks can I make
 - I want to make a drink
 
 ## intent:inform

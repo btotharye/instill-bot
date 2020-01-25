@@ -1,3 +1,7 @@
+## drink recipe list
+* drink_list: what recipes do you know?
+    - action
+
 ## Happy path drink recipe
 * request_drink_recipe: im looking for a drink recipe
     - drink_form
