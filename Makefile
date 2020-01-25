@@ -42,8 +42,10 @@ validate:
 test:
 	rasa train
 	rasa test --stories tests/e2e-stories.md --fail-on-prediction-errors --e2e
+	code results/failed_stories.md
 
 crossval:
 	rasa train
 	rasa test nlu -f 5 --cross-validation
 	python format_results.py
+	code results.md
