@@ -36,6 +36,15 @@
 - what is your name
 - who are you
 
+## intent:drink_list
+- what recipes do you know
+- what drinks can I make
+- can you tell me what recipes you know about
+- I need help knowing what recipes I can make
+- what are the drink options
+- what drinks can I make
+- what are my drink options
+
 ## intent:request_drink_recipe
 - I'm looking for a drink recipe
 - Can you tell me how to make a drink
@@ -51,7 +60,6 @@
 - How can I make a [hemingway](drink)
 - how do I make a [rum punch](drink)[punch](drink)
 - I want to find a drink recipe
-- what drinks can I make
 - I want to make a drink
 
 ## intent:inform
@@ -92,6 +100,7 @@
 - Can you bring dogs in
 - are you pet friendly
 - can I bring my dog
+- are dogs allowed?
 
 ## intent:tours
 - Do you do tours
@@ -100,6 +109,10 @@
 ## intent:hours
 - What are your hours today
 - what are your hours
+- when are you open?
+- I want to know your hours
+- please let me know when you are open
+- can you tell me what your hours are
 
 ## intent:help
 - can you help me

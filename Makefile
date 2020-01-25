@@ -14,6 +14,8 @@ help:
 	@echo "        Runs the rasa test suite checking for issues."
 	@echo "    crossval"
 	@echo "        Runs the rasa cross validation tests and creates results.md"
+	@echo "    shell"
+	@echo "        Runs the rasa train and rasa shell for testing"
 
 
 clean:
@@ -48,3 +50,7 @@ crossval:
 	rasa test nlu -f 5 --cross-validation
 	python format_results.py
 	code results.md
+
+shell:
+	rasa train --debug
+	rasa shell --debug
