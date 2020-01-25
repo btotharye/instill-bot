@@ -16,6 +16,10 @@
     - form{"name": "drink_form"}
     - form{"name": null}
 
+## ask about drink recipe list
+* drink_list
+    - action_drink_list
+
 ## say goodbye
 * goodbye
   - utter_goodbye

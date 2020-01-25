@@ -36,6 +36,15 @@
 - what is your name
 - who are you
 
+## intent:drink_list
+- what recipes do you know
+- what drinks can I make
+- can you tell me what recipes you know about
+- I need help knowing what recipes I can make
+- what are the drink options
+- what drinks can I make
+- what are my drink options
+
 ## intent:request_drink_recipe
 - I'm looking for a drink recipe
 - Can you tell me how to make a drink

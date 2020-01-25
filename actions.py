@@ -1,13 +1,34 @@
 from typing import Dict, Text, Any, List, Union
 
-from rasa_sdk import Tracker
+from rasa_sdk import Tracker, Action
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
+from rasa_sdk.events import (
+    EventType,
+)
 import json
 
 with open("drinks.json", "r") as f:
     drink_recipes_dict = json.load(f)
 
+
+class ActionDrinkList(Action):
+    """Returns the list of drinks we know recipes for"""
+
+    def name(self) -> Text:
+        return "action_drink_list"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        drink_list = []
+
+        for drink_recipe in drink_recipes_dict:
+            drink_list.append(drink_recipe['name'])
+            
+        recipe_response = "\n".join(str(drink) for drink in drink_list)
+        dispatcher.utter_message(
+            f'I know about the following drink recipes: {recipe_response}'
+        )
+        return []
 
 class DrinkForm(FormAction):
     """Custom form action for drink search"""
