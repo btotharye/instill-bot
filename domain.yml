@@ -2,21 +2,21 @@ session_config:
   session_expiration_time: 60.0
   carry_over_slots_to_new_session: true
 intents:
+- location
+- hours
+- tours
+- food
+- pet_friendly
 - greet
 - goodbye
 - affirm
 - deny
 - bot_challenge
 - inform
+- help
+- thanks
 - request_drink_recipe:
     use_entities: []
-- thanks
-- food
-- pet_friendly
-- tours
-- hours
-- help
-- location
 entities:
 - drink
 slots:
@@ -27,12 +27,12 @@ slots:
     type: unfeaturized
 templates:
   utter_greet:
-  - text: Hello!  I am the Instill Bot.  I can help you with our drink recipes.  What
-      drink would you like to make?
+  - text: Hello!  my name is Marissa.  I can help you with our drink recipes, hours,
+      and information about us.  What can I help you with?
   utter_goodbye:
   - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: my name is Marissa, I'm a bot to help with questions about Instill Distilling.
   utter_ask_drink:
   - text: What drink would you like the recipe for?
   utter_wrong_drink:
@@ -47,6 +47,9 @@ templates:
   utter_hours:
   - text: We are open Wednesday through Thursday from 6 pm to 9 pm, on Friday from
       5 pm to 9 pm and Saturday from 1 pm to 7 pm.
+  utter_help:
+  - text: I can help you with Instill's hours and can give information about how to
+      make our different drinks.  What can I help you with?
 actions:
 - utter_greet
 - utter_goodbye
@@ -54,5 +57,6 @@ actions:
 - utter_thanks
 - utter_food
 - utter_hours
+- utter_help
 forms:
 - drink_form

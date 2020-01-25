@@ -45,3 +45,11 @@
     - slot{"requested_slot":null}
 * thanks
     - utter_thanks
+
+## help Story
+* help
+    - utter_help
+
+## ask hours
+* hours
+    - utter_hours

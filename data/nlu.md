@@ -98,3 +98,10 @@
 
 ## intent:location
 - where are you located
+
+## intent:hours
+- what are your hours
+- What are your hours today
+
+## intent:pet_friendly
+- Can you bring dogs in
