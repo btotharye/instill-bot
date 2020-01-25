@@ -1,4 +1,4 @@
-name: Publish Docker
+name: Test Dockerfile
 on:
   pull_request:
     paths:
