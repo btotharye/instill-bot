@@ -54,8 +54,16 @@
 * hours
     - utter_hours
 
-## greet and food
+## food options
+* food
+    - utter_food
+* thanks
+    - utter_thanks
+
+## greet with food question
 * greet
     - utter_greet
 * food
     - utter_food
+* thanks
+    - utter_thanks

@@ -84,6 +84,7 @@
 - what are your food options
 - do you offer food options?
 - do you offer any food options
+- do you offer food options?
 
 ## intent:pet_friendly
 - Can you bring dogs in
