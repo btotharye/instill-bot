@@ -16,8 +16,7 @@ You will also need to install the pre-reqs with `pip3 install requirements-dev.t
 2. Bring up action server - `rasa run actions --actions actions`
 3. Then talk to it/test it via the CLI with - `rasa shell`
 
-# Local Deployment
-You can follow the normal [Rasa Open Source Install](https://rasa.com/docs/rasa/user-guide/installation/) instructions to install this project locally.
+You can find more information at [Rasa Open Source Install](https://rasa.com/docs/rasa/user-guide/installation/) for instructions to install and setup Rasa locally.
 
 ## Action Server
 This assistant does require the action server to be running.  More information on what this is can be found at [Rasa Action Server](https://rasa.com/docs/rasa/api/rasa-sdk/#running-the-action-server)
