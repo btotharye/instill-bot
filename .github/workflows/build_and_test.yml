@@ -42,7 +42,7 @@ jobs:
       run: |
         make types
   data-validation:
-    name: Data Validation
+    name: Rasa Data Validation
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1

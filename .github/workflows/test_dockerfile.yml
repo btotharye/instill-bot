@@ -8,6 +8,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    name: Test Dockerfile on PR
     steps:
       - uses: actions/checkout@master
       - name: hadolint Dockerfile
