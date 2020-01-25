@@ -10,6 +10,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    name: Test Dockerfile
     steps:
       - uses: actions/checkout@master
       - name: hadolint Dockerfile
