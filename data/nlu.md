@@ -5,6 +5,7 @@
 - good morning
 - good evening
 - hey there
+- Hello
 
 ## intent:goodbye
 - bye
@@ -32,6 +33,7 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+- what is your name
 
 ## intent:request_drink_recipe
 - I'm looking for a drink recipe
@@ -69,3 +71,30 @@
 - Thanks a bunch
 - Thank you very much
 - Thank you so much
+
+## intent:food
+- do you have food options
+- do you offer food options
+- do you offer food
+- do you have food
+- do you have food?
+- Do you serve food
+
+## intent:pet_friendly
+- Can you bring dogs in
+
+## intent:tours
+- Do you do tours
+
+## intent:hours
+- What are your hours today
+- what are your hours
+
+## intent:help
+- can you help me
+- I need help
+- what can you help me with
+- what can you do
+
+## intent:location
+- where are you located

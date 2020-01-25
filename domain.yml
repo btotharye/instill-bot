@@ -1,5 +1,5 @@
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 60.0
   carry_over_slots_to_new_session: true
 intents:
 - greet
@@ -11,6 +11,12 @@ intents:
 - request_drink_recipe:
     use_entities: []
 - thanks
+- food
+- pet_friendly
+- tours
+- hours
+- help
+- location
 entities:
 - drink
 slots:
@@ -35,10 +41,18 @@ templates:
   - text: sorry, I didn't understand you, please try inputing something else
   utter_thanks:
   - text: You are welcome
+  utter_food:
+  - text: Sometimes we have a food truck but you can bring your own food or order
+      from GrubHub.
+  utter_hours:
+  - text: We are open Wednesday through Thursday from 6 pm to 9 pm, on Friday from
+      5 pm to 9 pm and Saturday from 1 pm to 7 pm.
 actions:
 - utter_greet
 - utter_goodbye
 - utter_iamabot
 - utter_thanks
+- utter_food
+- utter_hours
 forms:
 - drink_form
