@@ -76,6 +76,12 @@
 * food
     - utter_food
 
+## greet with bot challenge and pet friendly
+* greet
+    - utter_greet
+* bot_challenge
+    - utter_iamabot
+    
 ## tours story
 * tours
     - utter_tours
