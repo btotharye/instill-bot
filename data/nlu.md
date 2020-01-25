@@ -34,6 +34,7 @@
 - am I talking to a bot?
 - am I talking to a human?
 - what is your name
+- who are you
 
 ## intent:request_drink_recipe
 - I'm looking for a drink recipe
@@ -51,6 +52,7 @@
 - how do I make a [rum punch](drink)[punch](drink)
 - I want to find a drink recipe
 - what drinks can I make
+- I want to make a drink
 
 ## intent:inform
 - [Painkiller](drink)
@@ -84,13 +86,16 @@
 - what are your food options
 - do you offer food options?
 - do you offer any food options
-- do you offer food options?
+- do you have any food options
 
 ## intent:pet_friendly
 - Can you bring dogs in
+- are you pet friendly
+- can I bring my dog
 
 ## intent:tours
 - Do you do tours
+- do you do tours
 
 ## intent:hours
 - What are your hours today

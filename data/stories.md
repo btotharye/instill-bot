@@ -75,3 +75,11 @@
     - utter_hours
 * food
     - utter_food
+
+## greet with bot challenge and pet friendly
+* greet
+    - utter_greet
+* bot_challenge
+    - utter_iamabot
+* pet_friendly
+    - utter_petfriendly
