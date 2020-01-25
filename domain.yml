@@ -15,6 +15,7 @@ intents:
 - inform
 - help
 - thanks
+- drink_list
 - request_drink_recipe:
     use_entities: []
 entities:
@@ -66,5 +67,6 @@ actions:
 - utter_help
 - utter_petfriendly
 - utter_tours
+- action_drink_list
 forms:
 - drink_form
