@@ -23,7 +23,7 @@ class ActionDrinkList(Action):
 
         for drink_recipe in drink_recipes_dict:
             drink_list.append(drink_recipe['name'])
-            
+
         recipe_response = "\n".join(str(drink) for drink in drink_list)
         dispatcher.utter_message(
             f'I know about the following drink recipes: {recipe_response}'
