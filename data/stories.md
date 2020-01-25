@@ -69,7 +69,6 @@
     - utter_thanks
 
 ## Story from conversation with 98f143c1-704f-471c-a5fd-03e5cc067297 on January 25th 2020
-
 * greet
     - utter_greet
 * hours
