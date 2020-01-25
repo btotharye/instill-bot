@@ -71,6 +71,7 @@
 - Thanks a bunch
 - Thank you very much
 - Thank you so much
+- ok great thanks
 
 ## intent:food
 - do you have food options
@@ -79,6 +80,7 @@
 - do you have food
 - do you have food?
 - Do you serve food
+- do you offer food options?
 
 ## intent:pet_friendly
 - Can you bring dogs in
@@ -98,10 +100,3 @@
 
 ## intent:location
 - where are you located
-
-## intent:hours
-- what are your hours
-- What are your hours today
-
-## intent:pet_friendly
-- Can you bring dogs in
