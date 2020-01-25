@@ -5,6 +5,8 @@
 - good morning
 - good evening
 - hey there
+- what is your name
+- Hello
 
 ## intent:goodbye
 - bye
@@ -69,3 +71,25 @@
 - Thanks a bunch
 - Thank you very much
 - Thank you so much
+
+## intent:help
+- what can you help me with
+- I need help
+- what can you do
+- can you help me
+
+## intent:location
+- where are you located
+
+## intent:hours
+- what are your hours
+- What are your hours today
+
+## intent:tours
+- Do you do tours
+
+## intent:food
+- Do you serve food
+
+## intent:pet_friendly
+- Can you bring dogs in
