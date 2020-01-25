@@ -45,7 +45,6 @@ test:
 	code results/failed_stories.md
 
 crossval:
-	rasa train
 	rasa test nlu -f 5 --cross-validation
 	python format_results.py
 	code results.md
