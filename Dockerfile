@@ -10,6 +10,4 @@ COPY . /app
 
 RUN  pip install -e . --no-cache-dir
 
-This should break in linting
-
 CMD ["start", "--actions", "actions"]
