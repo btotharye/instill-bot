@@ -13,10 +13,10 @@ intents:
 - deny
 - bot_challenge
 - inform
+- help
+- thanks
 - request_drink_recipe:
     use_entities: []
-- thanks
-- help
 entities:
 - drink
 slots:
@@ -41,22 +41,22 @@ templates:
   - text: sorry, I didn't understand you, please try inputing something else
   utter_thanks:
   - text: You are welcome
-  utter_help:
-  - text: I can help you with Instill's hours and can give information about how to
-      make our different drinks.  What can I help you with?
+  utter_food:
+  - text: Sometimes we have a food truck but you can bring your own food or order
+      from GrubHub.
   utter_hours:
   - text: We are open Wednesday through Thursday from 6 pm to 9 pm, on Friday from
       5 pm to 9 pm and Saturday from 1 pm to 7 pm.
-  utter_food:
-  - text: From time to time we have a food truck, but you can bring your own food
-      as well as order from grubhub.
+  utter_help:
+  - text: I can help you with Instill's hours and can give information about how to
+      make our different drinks.  What can I help you with?
 actions:
 - utter_greet
 - utter_goodbye
 - utter_iamabot
 - utter_thanks
-- utter_help
-- utter_hours
 - utter_food
+- utter_hours
+- utter_help
 forms:
 - drink_form
