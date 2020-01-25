@@ -7,7 +7,23 @@ on:
     - "actions.py"
     - "Dockerfile"
     - "drinks.json"
+  pull_request:
+    branches: 
+      - master
+    paths:
+    - "actions.py"
+    - "Dockerfile"
+    - "drinks.json"
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: hadolint Dockerfile
+        uses: burdzwastaken/hadolint-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HADOLINT_ACTION_DOCKERFILE_FOLDER: .
   build:
     runs-on: ubuntu-latest
     steps:
