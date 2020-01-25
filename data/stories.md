@@ -90,9 +90,14 @@
 * pet_friendly
     - utter_petfriendly
 
-## New Story
-
+## greet with bot challenge
 * greet
     - utter_greet
 * bot_challenge
     - utter_iamabot
+
+## hours and thanks
+* hours
+    - utter_hours
+* thanks
+    - utter_thanks

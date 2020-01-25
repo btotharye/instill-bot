@@ -19,6 +19,7 @@
 - of course
 - that sounds good
 - correct
+- awesome
 
 ## intent:deny
 - no
@@ -92,6 +93,7 @@
 - Can you bring dogs in
 - are you pet friendly
 - can I bring my dog
+- can I bring my dog with me?
 
 ## intent:tours
 - Do you do tours
@@ -100,6 +102,7 @@
 ## intent:hours
 - What are your hours today
 - what are your hours
+- what are your hours of operation
 
 ## intent:help
 - can you help me
