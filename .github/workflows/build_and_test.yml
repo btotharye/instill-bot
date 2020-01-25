@@ -1,5 +1,10 @@
-name: Build and Deploy
-on: [pull_request]
+name: Build and Test
+on:
+  pull_request:
+    paths-ignore:
+    - "README.md"
+    - "Makefile"
+    - "Dockerfile"
 
 jobs:
   lint-testing:

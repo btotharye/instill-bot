@@ -3,6 +3,10 @@ on:
   push:
     branches: 
       - master
+    paths:
+    - "actions.py"
+    - "Dockerfile"
+    - "drinks.json"
 jobs:
   build:
     runs-on: ubuntu-latest
