@@ -81,7 +81,7 @@
     - utter_greet
 * bot_challenge
     - utter_iamabot
-    
+
 ## tours story
 * tours
     - utter_tours
@@ -89,3 +89,10 @@
 ## pet friendly story
 * pet_friendly
     - utter_petfriendly
+
+## New Story
+
+* greet
+    - utter_greet
+* bot_challenge
+    - utter_iamabot
