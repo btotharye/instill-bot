@@ -1,4 +1,6 @@
-# Instill Bot
+# Instill Bot 
+![Build and Test](https://github.com/btotharye/instill-bot/workflows/Build%20and%20Test/badge.svg?branch=master)
+
 A chatbot/voice integration for [Instill Distilling](https://www.instilldistillingco.com/).
 
 Runs off of [Rasa](www.rasa.com)
