@@ -7,13 +7,6 @@ on:
     - "actions.py"
     - "Dockerfile"
     - "drinks.json"
-  pull_request:
-    branches: 
-      - master
-    paths:
-    - "actions.py"
-    - "Dockerfile"
-    - "drinks.json"
 jobs:
   test:
     runs-on: ubuntu-latest
