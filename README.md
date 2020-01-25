@@ -1,5 +1,5 @@
 # Instill Bot 
-![Build and Test](https://github.com/btotharye/instill-bot/workflows/Build%20and%20Test/badge.svg?branch=master)
+![Publish Docker](https://github.com/btotharye/instill-bot/workflows/Publish%20Docker/badge.svg)
 
 A chatbot/voice integration for [Instill Distilling](https://www.instilldistillingco.com/).
 
