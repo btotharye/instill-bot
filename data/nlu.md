@@ -50,6 +50,7 @@
 - How can I make a [hemingway](drink)
 - how do I make a [rum punch](drink)[punch](drink)
 - I want to find a drink recipe
+- what drinks can I make
 
 ## intent:inform
 - [Painkiller](drink)
@@ -71,6 +72,7 @@
 - Thanks a bunch
 - Thank you very much
 - Thank you so much
+- ok great thanks
 
 ## intent:food
 - do you have food options
@@ -79,6 +81,9 @@
 - do you have food
 - do you have food?
 - Do you serve food
+- what are your food options
+- do you offer food options?
+- do you offer any food options
 
 ## intent:pet_friendly
 - Can you bring dogs in
@@ -98,10 +103,3 @@
 
 ## intent:location
 - where are you located
-
-## intent:hours
-- what are your hours
-- What are your hours today
-
-## intent:pet_friendly
-- Can you bring dogs in

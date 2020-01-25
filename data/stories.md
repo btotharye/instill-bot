@@ -53,3 +53,9 @@
 ## ask hours
 * hours
     - utter_hours
+
+## greet and food
+* greet
+    - utter_greet
+* food
+    - utter_food
