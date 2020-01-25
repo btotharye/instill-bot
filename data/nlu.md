@@ -93,6 +93,7 @@
 - are you pet friendly
 - can I bring my dog
 
+
 ## intent:tours
 - Do you do tours
 - do you do tours
