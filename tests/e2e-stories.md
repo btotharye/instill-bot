@@ -23,11 +23,3 @@
     - slot{"requested_slot":null}
 * thanks: thanks
     - utter_thanks
-
-## Faq ask help
-* faq: what can you do
-    - respond_faq
-
-## Faq ask hours
-* faq: when is instill open
-    - respond_faq

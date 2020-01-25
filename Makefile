@@ -8,6 +8,13 @@ help:
 	@echo "        Lint code with flake8, and check if black formatter should be applied."
 	@echo "    types"
 	@echo "        Check for type errors using pytype."
+	@echo "    validate"
+	@echo "        Runs the rasa data validate to verify data."
+	@echo "    test"
+	@echo "        Runs the rasa test suite checking for issues."
+	@echo "    crossval"
+	@echo "        Runs the rasa cross validation tests and creates results.md"
+
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
@@ -27,3 +34,16 @@ lint:
 
 types:
 	pytype --keep-going actions.py
+
+validate:
+	rasa train
+	rasa data validate --debug
+
+test:
+	rasa train
+	rasa test --stories tests/e2e-stories.md --fail-on-prediction-errors --e2e
+
+crossval:
+	rasa train
+	rasa test nlu -f 5 --cross-validation
+	python format_results.py
