@@ -15,7 +15,7 @@
     - utter_thanks
 
 ## rum punch story test
-* request_drink_recipe: I want to make a [Rum Punch](drink:rum punch)
+* request_drink_recipe: I want to make a [Rum Punch](drink)
     - drink_form
     - form{"name":"drink_form"}
     - slot{"drink":"rum punch"}
@@ -23,11 +23,3 @@
     - slot{"requested_slot":null}
 * thanks: thanks
     - utter_thanks
-
-## Faq ask help
-* faq: what can you do
-    - respond_faq
-
-## Faq ask hours
-* faq: when is instill open
-    - respond_faq

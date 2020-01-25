@@ -17,3 +17,4 @@ models/
 *.db-wal
 gactions
 credentials.yml
+results.md
