@@ -75,3 +75,11 @@
     - utter_hours
 * food
     - utter_food
+
+## tours story
+* tours
+    - utter_tours
+
+## pet friendly story
+* pet_friendly
+    - utter_petfriendly

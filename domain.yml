@@ -50,6 +50,12 @@ templates:
   utter_help:
   - text: I can help you with Instill's hours and can give information about how to
       make our different drinks.  What can I help you with?
+  utter_petfriendly:
+  - text: Yes we are a dog friendly establishment for well behaved dogs.  Feel free
+      to bring them with you.
+  utter_tours:
+  - text: Yes we can do tours depending on how busy we are, we are always happy to
+      talk about our rum as well. 🥃
 actions:
 - utter_greet
 - utter_goodbye
@@ -58,5 +64,7 @@ actions:
 - utter_food
 - utter_hours
 - utter_help
+- utter_petfriendly
+- utter_tours
 forms:
 - drink_form
