@@ -84,13 +84,14 @@
 - what are your food options
 - do you offer food options?
 - do you offer any food options
-- do you offer food options?
 
 ## intent:pet_friendly
 - Can you bring dogs in
+- can I bring my dog
 
 ## intent:tours
 - Do you do tours
+- do you do tours
 
 ## intent:hours
 - What are your hours today
