@@ -22,6 +22,7 @@ intents:
     use_entities: []
     triggers: respond_out_of_scope
 - out_of_scope/other
+- out_of_scope/bourbon
 entities:
 - drink
 slots:

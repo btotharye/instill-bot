@@ -1,26 +1,41 @@
 {
   "actions": [
-    {
-      "description": "Default Welcome Intent",
-      "name": "MAIN",
-      "fulfillment": {
-        "conversationName": "<INSERT YOUR CONVERSATION NAME HERE>"
-      },
-      "intent": {
-        "name": "actions.intent.MAIN",
-        "trigger": {
-          "queryPatterns": [
-            "talk to Instill Distilling"
-          ]
-        }
-      }
-    }
-  ],
-  "conversations": {
-    "<INSERT YOUR CONVERSATION NAME HERE>": {
-      "name": "<INSERT YOUR CONVERSATION NAME HERE>",
-      "url": "<INSERT YOUR FULLFILLMENT URL HERE>"
-    }
-  },
-  "locale": "en"
+     {
+       "description": "Default Welcome Intent",
+       "name": "MAIN",
+       "fulfillment": {
+         "conversationName": "welcome"
+       },
+       "intent": {
+         "name": "actions.intent.MAIN",
+         "trigger": {
+           "queryPatterns":["talk to Instill Distilling"]
+         }
+       }
+     },
+   {
+       "description": "Rasa Intent",
+       "name": "TEXT",
+       "fulfillment": {
+         "conversationName": "rasa_intent"
+       },
+       "intent": {
+         "name": "actions.intent.TEXT",
+         "trigger": {
+           "queryPatterns":[]
+         }
+       }
+     }],
+   "conversations": {
+     "welcome": {
+       "name": "welcome",
+       "url": "https://221215ef.ngrok.io/webhooks/google_assistant/webhook",
+       "fulfillmentApiVersion": 2
+   },
+     "rasa_intent": {
+       "name": "rasa_intent",
+       "url": "https://221215ef.ngrok.io/webhooks/google_assistant/webhook",
+       "fulfillmentApiVersion": 2
+   }
+ }
 }
