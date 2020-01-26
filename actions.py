@@ -6,6 +6,7 @@ from rasa_sdk.forms import FormAction
 from rasa_sdk.events import EventType
 import json
 
+# Open drink json and convert to dict
 with open("drinks.json", "r") as f:
     drink_recipes_dict = json.load(f)
 
