@@ -9,10 +9,11 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
-    )
+)
 import json
 
 logger = logging.getLogger(__name__)
+
 
 class ActionPause(Action):
     """Pause the conversation"""
@@ -23,8 +24,10 @@ class ActionPause(Action):
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
         return [ConversationPaused()]
 
+
 with open("drinks.json", "r") as f:
     drink_recipes_dict = json.load(f)
+
 
 class ActionDrinkList(Action):
     """Returns the list of drinks we know recipes for"""
@@ -164,7 +167,8 @@ class ActionDefaultAskAffirmation(Action):
         ]
 
         message_title = (
-            "Sorry, I'm not sure that I've understood " "you correctly 🤔 Do you mean..."
+            "Sorry, I'm not sure that I've understood "
+            "you correctly 🤔 Do you mean..."  # noqa: E501
         )
 
         entities = tracker.latest_message.get("entities", [])
@@ -185,7 +189,8 @@ class ActionDefaultAskAffirmation(Action):
 
         # /out_of_scope is a retrieval intent
         # you cannot send rasa the '/out_of_scope' intent
-        # instead, you can send one of the sentences that it will map onto the response
+        # instead, you can send one of the sentences that it will
+        # map onto the response
         buttons.append(
             {
                 "title": "Something else",
@@ -197,9 +202,13 @@ class ActionDefaultAskAffirmation(Action):
 
         return []
 
-    def get_button_title(self, intent: Text, entities: Dict[Text, Text]) -> Text:
+    def get_button_title(
+        self, intent: Text, entities: Dict[Text, Text]
+    ) -> Text:  # noqa: E501
         default_utterance_query = self.intent_mappings.intent == intent
-        utterance_query = (self.intent_mappings.entities == entities.keys()) & (
+        utterance_query = (
+            self.intent_mappings.entities == entities.keys()
+        ) & (  # noqa: E501
             default_utterance_query
         )
 
@@ -208,7 +217,9 @@ class ActionDefaultAskAffirmation(Action):
         if len(utterances) > 0:
             button_title = utterances[0]
         else:
-            utterances = self.intent_mappings[default_utterance_query].button.tolist()
+            utterances = self.intent_mappings[
+                default_utterance_query
+            ].button.tolist()  # noqa: E501
             button_title = utterances[0] if len(utterances) > 0 else intent
 
         return button_title.format(**entities)
@@ -228,7 +239,8 @@ class ActionDefaultFallback(Action):
         # Fallback caused by TwoStageFallbackPolicy
         if (
             len(tracker.events) >= 4
-            and tracker.events[-4].get("name") == "action_default_ask_affirmation"
+            and tracker.events[-4].get("name")
+            == "action_default_ask_affirmation"  # noqa: E501
         ):
 
             dispatcher.utter_template("utter_restart_with_button", tracker)
