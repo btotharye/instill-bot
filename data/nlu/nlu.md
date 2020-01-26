@@ -140,3 +140,9 @@
 - what is the square root of 5
 - why are you stupid
 - I am asking you an out of scope question
+
+## intent:out_of_scope/bourbon
+- do you make bourbon
+- do you have bourbon there
+- can I get bourbon at your place
+- I'm a bourbon guy

@@ -6,6 +6,8 @@ pipeline:
 - name: CountVectorsFeaturizer
   token_pattern: (?u)\b\w+\b
 - name: EmbeddingIntentClassifier
+  epochs: 50
+  loss_type: margin
 - name: ResponseSelector
   retrieval_intent: out_of_scope
 policies:
