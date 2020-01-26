@@ -1,3 +1,7 @@
+## out of scope
+* out_of_scope
+    - respond_out_of_scope
+
 ## happy path w/greet
 * greet
     - utter_greet
@@ -105,3 +109,7 @@
     - utter_hours
 * thanks
     - utter_thanks
+
+## location story
+* location
+    - utter_location

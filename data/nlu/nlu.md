@@ -38,7 +38,7 @@
 
 ## intent:drink_list
 - what recipes do you know
-- what drinks can I make
+- what drink recipes do you know
 - can you tell me what recipes you know about
 - I need help knowing what recipes I can make
 - what are the drink options
@@ -74,6 +74,8 @@
 - [Rum Punch](drink)
 - [Hemingway](drink)
 - [hemingway](drink)
+- the [Painkiller](drink) please
+- I want the [Joco Mule](drink)
 
 ## intent:thanks
 - thanks
@@ -106,6 +108,10 @@
 ## intent:tours
 - Do you do tours
 - do you do tours
+- do you offer tours?
+- can I tour your facility?
+- I want to go on a tour
+- when is the best time to come for a tour.
 
 ## intent:hours
 - What are your hours today
@@ -124,3 +130,19 @@
 
 ## intent:location
 - where are you located
+- how do I get to instill?
+- where is instill located
+- what is the address
+- can you give me information on how to get to instill?
+
+## intent:out_of_scope/other
+- who is the president
+- what is the square root of 5
+- why are you stupid
+- I am asking you an out of scope question
+
+## intent:out_of_scope/bourbon
+- do you make bourbon
+- do you have bourbon there
+- can I get bourbon at your place
+- I'm a bourbon guy
