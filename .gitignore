@@ -18,3 +18,5 @@ models/
 gactions
 credentials.yml
 results.md
+creds.data
+action.json
