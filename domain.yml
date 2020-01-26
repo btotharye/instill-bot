@@ -18,6 +18,10 @@ intents:
 - drink_list
 - request_drink_recipe:
     use_entities: []
+- out_of_scope:
+    use_entities: []
+    triggers: respond_out_of_scope
+- out_of_scope/other
 entities:
 - drink
 slots:
@@ -39,7 +43,7 @@ templates:
   utter_wrong_drink:
   - text: Sorry I cannot find that drink in my recipe list, please try again
   utter_default:
-  - text: sorry, I didn't understand you, please try inputing something else
+  - text: sorry, I didn't understand your question, can you try rephrasing it?
   utter_thanks:
   - text: You are welcome
   utter_food:
@@ -55,8 +59,18 @@ templates:
   - text: Yes we are a dog friendly establishment for well behaved dogs.  Feel free
       to bring them with you.
   utter_tours:
-  - text: Yes we can do tours depending on how busy we are, we are always happy to
-      talk about our rum as well. 🥃
+  - text: Yes we can do tours, you can schedule one on our website at, https://www.instilldistillingco.com/tours
+      🥃
+  utter_location:
+  - text: We are located in downtown Clayton right next to Deep River brewing and
+      our address is 710 W Main St Ste 111, Clayton, NC 27520
+  utter_restart_with_button:
+  - buttons:
+    - payload: /restart
+      title: Restart
+    text: Click the button below if you want to start over.
+  utter_ask_rephrase:
+  - text: I'm sorry can you rephrase your question?
 actions:
 - utter_greet
 - utter_goodbye
@@ -67,6 +81,14 @@ actions:
 - utter_help
 - utter_petfriendly
 - utter_tours
+- utter_location
+- utter_default
+- utter_ask_drink
+- utter_wrong_drink
 - action_drink_list
+- utter_restart_with_button
+- action_default_ask_affirmation
+- action_default_fallback
+- respond_out_of_scope
 forms:
 - drink_form

@@ -1,0 +1,16 @@
+intent,button,entities
+affirm,Yes,
+deny,No,
+greet,"Say ""Hello"" ",
+bye,Bye,
+bot_challenge,Who are you?,
+drink_list,what drinks can I make?,
+inform,I want to make a {drink},drink
+inform,{drink},drink
+thanks,Thanks,
+food,do you have food options,
+pet_friendly,can I bring my dog?,
+tours,do you offer tours?,
+hours,when are you open?,
+help,what can you help me with?,
+location,where are you located?,

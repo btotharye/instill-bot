@@ -6,8 +6,13 @@ pipeline:
 - name: CountVectorsFeaturizer
   token_pattern: (?u)\b\w+\b
 - name: EmbeddingIntentClassifier
+- name: ResponseSelector
+  retrieval_intent: out_of_scope
 policies:
-- name: FallbackPolicy
-- name: AugmentedMemoizationPolicy
+- max_history: 6
+  name: AugmentedMemoizationPolicy
+- core_threshold: 0.3
+  name: TwoStageFallbackPolicy
+  nlu_threshold: 0.8
 - name: FormPolicy
 - name: MappingPolicy
