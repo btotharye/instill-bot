@@ -3,7 +3,7 @@ from typing import Dict, Text, Any, List, Union
 from rasa_sdk import Tracker, Action
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import EventType
+from rasa_sdk.events import EventType, SlotSet
 import json
 
 # Open drink json and convert to dict
@@ -106,6 +106,6 @@ class DrinkForm(FormAction):
                 dispatcher.utter_message(
                     f"To make a {drink}, you will combine the following "
                     f"ingredients: \n {drink_ingredients} \n"
-                    f"and garnish with {drink_garnish}"
+                    f"and garnish with an {drink_garnish}"
                 )
-        return []
+        return [SlotSet(drink, None)]
