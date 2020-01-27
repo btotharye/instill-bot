@@ -108,4 +108,4 @@ class DrinkForm(FormAction):
                     f"ingredients: \n {drink_ingredients} \n"
                     f"and garnish with an {drink_garnish}"
                 )
-        return [SlotSet(slot_name, None)]
+        return [SlotSet(drink, None)]
