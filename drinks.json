@@ -6,7 +6,7 @@
             "1 part orange juice",
             "1 oz Instill white rum",
             "1 oz Instill spiced rum",
-            "splash of ginger ale or ginger beer"
+            "and splash of ginger ale or ginger beer"
         ],
         "garnish": "orange wedge"
     },
@@ -15,9 +15,9 @@
         "ingredients": [
             "1 part orange juice",
             "2 part pineapple juice",
-            "Create of cocunut to taste",
+            "Cream of cocunut to taste",
             "2 oz Instill white rum",
-            "Shake well and serve over ice"
+            "and Shake well and serve over ice"
         ],
         "garnish": "orange wedge"
     },
@@ -27,7 +27,7 @@
             "1 oz Instill White rum",
             "1 oz Instill Spiced rum",
             "2 parts ginger ale",
-            "Splash of ginger beer on the top"
+            "and a Splash of ginger beer on the top"
         ],
         "garnish": "lime wedge"
     },
@@ -38,7 +38,7 @@
             "1 part lime juice",
             "1 part grapefruit juice",
             "Shake well over ice",
-            "Serve in cup without ice"
+            "and Serve in cup without ice"
         ],
         "garnish": "grapefruit wedge dipped in sugar"
     }
