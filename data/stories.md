@@ -8,7 +8,7 @@
 * thanks
     - utter_thanks
 * goodbye
-    - utter_goodbye
+    - action_goodbye
 
 ## happy path no greet
 * request_drink_recipe
@@ -22,7 +22,7 @@
 
 ## say goodbye
 * goodbye
-  - utter_goodbye
+  - action_goodbye
 
 ## bot challenge
 * bot_challenge

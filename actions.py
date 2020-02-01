@@ -11,6 +11,18 @@ with open("drinks.json", "r") as f:
     drink_recipes_dict = json.load(f)
 
 
+class ActionBye(Action):
+    """Will eventually cancel conversation when goodbye intent is triggered"""
+
+    def name(self) -> Text:
+        return "action_goodbye"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        
+        dispatcher.utter_message("See ya later.")
+        return []
+
+
 class ActionDrinkList(Action):
     """Returns the list of drinks we know recipes for"""
 

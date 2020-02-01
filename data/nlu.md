@@ -7,6 +7,21 @@
 - hey there
 - Hello
 
+## intent:goodbye
+- bye
+- goodbye
+- see you around
+- see you later
+
+## intent:thanks
+- thanks
+- thank you
+- Thanks a lot
+- Thanks a bunch
+- Thank you very much
+- Thank you so much
+- ok great thanks
+
 ## intent:affirm
 - yes
 - indeed
@@ -110,3 +125,5 @@
 
 ## intent:location
 - where are you located
+- how do I get to instill
+- what is your address
