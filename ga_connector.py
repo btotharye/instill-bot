@@ -8,9 +8,15 @@ from rasa.core.channels.channel import UserMessage, OutputChannel
 from rasa.core.channels.channel import InputChannel
 from rasa.core.channels.channel import CollectingOutputChannel
 
-
 logger = logging.getLogger(__name__)
 
+# Goodbye Phrases
+goodbyes = [
+    "bye",
+    "later",
+    "see ya",
+
+]
 
 class GoogleConnector(InputChannel):
     """A custom http input channel.
@@ -40,7 +46,7 @@ class GoogleConnector(InputChannel):
             expect_response = True
             if intent == 'actions.intent.MAIN':
                 message = "Hello! Welcome to the Instill Distilling skill. You can start by saying hi."
-            elif intent == 'actions.intent.CANCEL':
+            elif intent == 'actions.intent.CANCEL' or any(ele in text for ele in goodbyes):
                 data = {
                     "expectUserResponse": False,
                     "finalResponse": {
