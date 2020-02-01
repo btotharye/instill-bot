@@ -7,12 +7,6 @@
 - hey there
 - Hello
 
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
-
 ## intent:affirm
 - yes
 - indeed
@@ -75,14 +69,6 @@
 - [Hemingway](drink)
 - [hemingway](drink)
 
-## intent:thanks
-- thanks
-- thank you
-- Thanks a lot
-- Thanks a bunch
-- Thank you very much
-- Thank you so much
-- ok great thanks
 
 ## intent:food
 - do you have food options

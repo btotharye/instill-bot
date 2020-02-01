@@ -93,6 +93,8 @@ class DrinkForm(FormAction):
         drink = tracker.get_slot("drink")
         drink_recipe = {}
 
+        print(f"The drink is: {drink}")
+
         # Ensure drink recipe is in our drink dict and
         # grab its data for the response.
         for drink_recipe in drink_recipes_dict:
