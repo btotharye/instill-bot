@@ -3,12 +3,28 @@ from typing import Dict, Text, Any, List, Union
 from rasa_sdk import Tracker, Action
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import EventType, SlotSet
+from rasa_sdk.events import (
+    EventType, 
+    SlotSet, 
+    ConversationPaused
+)
 import json
 
 # Open drink json and convert to dict
 with open("drinks.json", "r") as f:
     drink_recipes_dict = json.load(f)
+
+
+class ActionCancel(Action):
+    """Cancel the conversation"""
+
+    def name(self) -> Text:
+        return "action_cancel"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        print("We made it to cancel function...")
+        dispatcher.utter_message("cancel")
+        return []
 
 
 class ActionBye(Action):

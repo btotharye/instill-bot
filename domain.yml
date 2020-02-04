@@ -21,7 +21,6 @@ intents:
 - out_of_scope:
     use_entities: []
     triggers: respond_out_of_scope
-- out_of_scope/other
 entities:
 - drink
 slots:
@@ -89,9 +88,8 @@ actions:
 - utter_wrong_drink
 - action_drink_list
 - utter_restart_with_button
-- action_default_ask_affirmation
-- action_default_fallback
 - action_goodbye
+- action_cancel
 - respond_out_of_scope
 forms:
 - drink_form

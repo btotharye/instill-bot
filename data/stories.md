@@ -9,24 +9,28 @@
     - utter_thanks
 * goodbye
     - action_goodbye
+    - action_cancel
 
 ## happy path no greet
 * request_drink_recipe
     - drink_form
     - form{"name": "drink_form"}
     - form{"name": null}
+    - action_cancel
 
 ## ask about drink recipe list
 * drink_list
     - action_drink_list
+    - action_cancel
 
 ## say goodbye
 * goodbye
-  - action_goodbye
+  - action_cancel
 
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+  - action_cancel
 
 ## rum punch story
 * greet
@@ -39,6 +43,7 @@
     - slot{"requested_slot":null}
 * thanks
     - utter_thanks
+    - action_cancel
 
 ## hemingway story
 * request_drink_recipe{"drink":"hemingway"}
@@ -49,6 +54,7 @@
     - slot{"requested_slot":null}
 * thanks
     - utter_thanks
+    - action_cancel
 
 ## help Story
 * help
@@ -57,12 +63,15 @@
 ## ask hours
 * hours
     - utter_hours
+    - action_cancel
+
 
 ## food options
 * food
     - utter_food
 * thanks
     - utter_thanks
+    - action_cancel
 
 ## greet with food question
 * greet
@@ -71,6 +80,7 @@
     - utter_food
 * thanks
     - utter_thanks
+    - action_cancel
 
 ## Story from conversation with 98f143c1-704f-471c-a5fd-03e5cc067297 on January 25th 2020
 * greet
@@ -79,20 +89,24 @@
     - utter_hours
 * food
     - utter_food
+    - action_cancel
 
 ## greet with bot challenge and pet friendly
 * greet
     - utter_greet
 * bot_challenge
     - utter_iamabot
+    - action_cancel
 
 ## tours story
 * tours
     - utter_tours
+    - action_cancel
 
 ## pet friendly story
 * pet_friendly
     - utter_petfriendly
+    - action_cancel
 
 ## greet with bot challenge
 * greet
@@ -100,8 +114,7 @@
 * bot_challenge
     - utter_iamabot
 
-## hours and thanks
-* hours
-    - utter_hours
+## thanks
 * thanks
     - utter_thanks
+    - action_cancel

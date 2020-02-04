@@ -7,6 +7,7 @@ from typing import Text, Optional, List, Dict, Any
 from rasa.core.channels.channel import UserMessage, OutputChannel
 from rasa.core.channels.channel import InputChannel
 from rasa.core.channels.channel import CollectingOutputChannel
+from rasa_sdk import Tracker
 
 logger = logging.getLogger(__name__)
 
@@ -41,6 +42,9 @@ class GoogleConnector(InputChannel):
         async def receive(request):
             payload = request.json
             print(f"The payload is : {payload}")
+            user_data = UserMessage()
+            print(f"The self object is: {self.__dict__}")
+            print(f"The user message is: {user_data.__dict__}")
             intent = payload['inputs'][0]['intent']
             text = payload['inputs'][0]['rawInputs'][0]['query']
             expect_response = True
@@ -66,7 +70,26 @@ class GoogleConnector(InputChannel):
                 out = CollectingOutputChannel()
                 await on_new_message(UserMessage(text, out))
                 responses = [m["text"] for m in out.messages]
+                print(f"The responses is: {responses}")
                 message = responses[0]
+                if responses[1]:
+                    print(f"The message is: {responses[1]}")
+                    if responses[1] == 'cancel':
+                        data = {
+                            "expectUserResponse": False,
+                            "finalResponse": {
+                                "richResponse": {
+                                    "items": [
+                                        {
+                                            "simpleResponse": {
+                                                "textToSpeech": "goodbye"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                        return response.json(data)
             r = {
                 "expectUserResponse": expect_response,
                 "expectedInputs": [
