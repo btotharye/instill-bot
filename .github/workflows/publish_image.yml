@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish Action Image to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: realbtotharye/instill-action
         username: ${{ secrets.DOCKER_USERNAME }}
